@@ -12,7 +12,7 @@ public class App
         System.out.println( "RMI Server started!" );
 
         String name = "rmi.service.DemoService";
-        int port = 1099;
+		int port = Integer.parseInt(System.getProperty("app.rmi.server.port", "1099"));
 
         DemoService service = new DemoServerImpl();
         Registry registry = LocateRegistry.createRegistry(port);
