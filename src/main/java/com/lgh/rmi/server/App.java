@@ -15,7 +15,7 @@ public class App
         int port = 1099;
 
         DemoService service = new DemoServerImpl();
-        Registry registry1 = LocateRegistry.createRegistry(port);
-        registry1.bind(name, service);
+        Registry registry = LocateRegistry.createRegistry(port);
+        registry.bind(name, service);
     }
 }

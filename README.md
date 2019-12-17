@@ -1,5 +1,5 @@
 # compile
-./mvnw clean compile
+./mvnw clean package
 
 # run
-java -cp classes -Djava.rmi.server.hostname=192.168.56.11 com.lgh.rmi.server.App
+java -Djava.rmi.server.hostname=192.168.56.101 -jar rmi.server.jar
